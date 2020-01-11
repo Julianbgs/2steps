@@ -38,6 +38,7 @@
 
 .portfolio__img
   position: relative
+  display: block
 
 .portfolio__zoom
   position: absolute
@@ -65,6 +66,60 @@
   animation: zoom-hide 1s forwards
 
 @keyframes zoom-hide
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+.portfolio__next-bg
+  position: absolute
+  top: 0
+  right: 0
+  height: 100%
+  width: 20%
+  background: linear-gradient( to bottom, #66172f, #641540, #3a103a)
+  opacity: 0
+
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 50%
+    height: 100%
+    background: linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(28, 28, 28, 1) 100%)
+
+.portfolio__prev-bg
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 20%
+  background: linear-gradient( to bottom, #66172f, #641540, #3a103a)
+  opacity: 0
+
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    width: 50%
+    height: 100%
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(28, 28, 28, 1) 100%)
+
+.portfolio__show-bg
+  animation: visible-on 1s forwards
+
+@keyframes  visible-on
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.portfolio__hide-bg
+  animation: visible-off 1s forwards
+
+@keyframes  visible-off
   0%
     opacity: 1
   100%
