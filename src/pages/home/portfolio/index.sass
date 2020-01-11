@@ -1,0 +1,71 @@
+.portfolio
+  position: relative
+  width: 100%
+  height: 100%
+  box-sizing: border-box
+  padding: 60px 100px
+  background-color: #1c1c1c
+
+  .swiper-button-next
+    right: 30px
+    width: 42px
+    height: 74px
+    background-image: url("./next.png")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    outline: none
+
+    &::after, &::before
+      display: none
+
+  .swiper-button-prev
+    left: 20px
+    width: 42px
+    height: 74px
+    background-image: url("./prev.png")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    outline: none
+
+    &::after, &::before
+      display: none
+
+.portfolio__slide
+    width: 420px
+    height: 100%
+
+.portfolio__img
+  position: relative
+
+.portfolio__zoom
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 166px
+  height: 159px
+  transform: translate(-50%, -50%)
+  background-image: url("./zoom.png")
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  opacity: 0
+
+.portfolio__show-zoom
+  animation: zoom-add 1s forwards
+
+@keyframes zoom-add
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.portfolio__fade-zoom
+  animation: zoom-hide 1s forwards
+
+@keyframes zoom-hide
+  0%
+    opacity: 1
+  100%
+    opacity: 0
