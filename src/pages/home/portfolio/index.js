@@ -1,5 +1,5 @@
 import './index.sass';
-import Swiper from 'swiper';
+import Swiper from 'swiper/js/swiper.min';
 import 'swiper/css/swiper.min.css';
 
 export default () => {
