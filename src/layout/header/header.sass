@@ -5,6 +5,12 @@
   width: 100%
   padding: 50px
 
+  @media (max-width: 700px)
+    padding: 20px
+
+    @media (max-width: 320px)
+      padding: 10px
+
 .header__wrap
   display: flex
   justify-content: space-between
@@ -12,6 +18,10 @@
 
 .header__logo
   height: 80px
+
+  @media (max-width: 700px)
+    height: 40px
+    width: 130px
 
   img
     width: 100%
@@ -22,7 +32,14 @@
   flex-direction: column
   align-items: center
   width: 390px
-  margin-right: 100px
+
+  @media (max-width: 700px)
+    width: 190px
+    justify-content: flex-end
+    margin-right: 0
+
+    @media (max-width: 320px)
+      width: 160px
 
 .header__buy-btn
   display: flex
@@ -36,12 +53,34 @@
   font-size: 25px
   text-decoration: none
 
-  &:hover
-    background-color: #27a3de
+  @media (max-width: 700px)
+    height: 40px
+    font-size: 15px
+
+  @media (max-width: 320px)
+    font-size: 14px
 
 .header__buy-descr
   padding-top: 20px
   color: rgba(255, 255, 255, 0.4)
+
+  @media (max-width: 700px)
+      display: none
+
+.header__buy-descr-mobile
+  display: none
+  padding-top: 20px
+  color: rgba(255, 255, 255, 0.6)
+
+  @media (max-width: 700px)
+    display: block
+    width: 100%
+    text-align: center
+
+.header__info
+  @media (max-width: 700px)
+    width: 100%
+    padding-top: 20px
 
 .header__elem
   display: flex
@@ -89,20 +128,38 @@
 .header__on
   animation: icon-on 1s forwards
 
-.header__off
-  animation: icon-off 1s forwards
-
 @keyframes icon-on
   0%
     color: rgba(255, 255, 255, 0.6)
   100%
     color: rgba(255, 255, 255, 1)
 
+.header__off
+  animation: icon-off 1s forwards
+
 @keyframes icon-off
   0%
     color: rgba(255, 255, 255, 1)
   100%
     color: rgba(255, 255, 255, 0.6)
+
+.header__color-add
+  animation: color-on 1s forwards
+
+@keyframes color-on
+  0%
+   background-color:  rgba(39, 163, 222, 0)
+  100%
+    background-color: rgba(39, 163, 222, 1)
+
+.header__color-fade
+  animation: color-off 1s forwards
+
+@keyframes color-off
+  0%
+    background-color:  rgba(39, 163, 222, 1)
+  100%
+    background-color: rgba(39, 163, 222, 0)
 
 .header__show
   animation: text-show 1s forwards

@@ -1,1 +1,56 @@
+.main
+  width: 100%
+
+.main__bg
+  height: 1113px
+
+  @media (max-width: 700px)
+    height: 400px
+
+  img
+    height: 100%
+    width: 100%
+
+.main__gradient
+  width: 100%
+  height: 15px
+  background: linear-gradient(45deg, #f10365, #f75bb2, #f63289, #3b68b1, #2268b9, #0b0f73)
+  background-size: 300% 300%
+  -webkit-animation: Gradient 15s ease infinite
+  -moz-animation: Gradient 15s ease infinite
+  animation: Gradient 11s ease infinite
+
+@-webkit-keyframes Gradient
+  0%
+    background-position: 0% 50%
+
+  50%
+    background-position: 100% 50%
+
+  100%
+   background-position: 0% 50%
+
+
+
+@-moz-keyframes Gradient
+  0%
+   background-position: 0% 50%
+
+  50%
+   background-position: 100% 50%
+
+  100%
+    background-position: 0% 50%
+
+
+
+@keyframes Gradient
+  0%
+    background-position: 0% 50%
+
+  50%
+    background-position: 100% 50%
+
+  100%
+   background-position: 0% 50%
 

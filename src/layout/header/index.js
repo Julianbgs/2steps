@@ -9,6 +9,8 @@ export default () => {
   const $phoneText = $('.header__descr-phone');
   const $emailElem = $('#email');
   const $phoneElem = $('#phone');
+  const $buyElem = $('.header__buy');
+  const $buyBtn = $('.header__buy-btn');
 
   function overAnimation(elem, link) {
     elem.mouseover(() => {
@@ -21,6 +23,20 @@ export default () => {
     elem.mouseout(() => {
       link.addClass('header__off');
       link.removeClass('header__on');
+    });
+  }
+
+  function overAnimationBtn(elem, link) {
+    elem.mouseover(() => {
+      link.addClass('header__color-add');
+      link.removeClass('header__color-fade');
+    });
+  }
+
+  function outAnimationBtn(elem, link) {
+    elem.mouseout(() => {
+      link.addClass('header__color-fade');
+      link.removeClass('header__color-add');
     });
   }
 
@@ -51,6 +67,11 @@ export default () => {
   outAnimation($emailLink ,$emailIcon);
   overAnimation($phoneLink, $phoneIcon);
   outAnimation($phoneLink, $phoneIcon);
+  // end
+
+  //animate button
+  overAnimationBtn($buyElem, $buyBtn);
+  outAnimationBtn($buyElem, $buyBtn);
   // end
 
   // animate text and bg
