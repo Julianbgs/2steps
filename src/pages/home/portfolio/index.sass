@@ -16,6 +16,11 @@
     background-size: cover
     outline: none
 
+    @media (max-width: 700px)
+      width: 21px
+      height: 37px
+      transform: translateY(-50%)
+
     &::after, &::before
       display: none
 
@@ -29,12 +34,20 @@
     background-size: cover
     outline: none
 
+    @media (max-width: 700px)
+      width: 21px
+      height: 37px
+      transform: translateY(-50%)
+
     &::after, &::before
       display: none
 
 .portfolio__slide
     width: 420px
     height: 100%
+
+    @media (max-width: 700px)
+      width: 200px
 
 .portfolio__img
   position: relative
