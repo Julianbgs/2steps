@@ -1,0 +1,119 @@
+.about
+  width: 100%
+  height: 100%
+  padding: 0 0 550px 0
+  background-image: url("./bg-new.png")
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+
+  @media (max-width: 700px)
+    padding: 40px 20px 80px 20px
+
+
+.about__wrapper
+  padding: 100px 280px 0 280px
+
+  @media (max-width: 700px)
+    padding: 0
+
+
+.about__team
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.about__elem
+  display: flex
+  justify-content: center
+  align-items: center
+  width: calc(50% - 15px)
+
+  @media (max-width: 700px)
+    width: 100%
+    margin-bottom: 20px
+
+    &:last-child
+      margin-bottom: 0
+
+.about__img
+  width: 100%
+  height: 600px
+
+  @media (max-width: 700px)
+    height: 400px
+
+  img
+    width: 100%
+    height: 100%
+
+.about__description-wrap
+  position: relative
+  display: flex
+  margin: 20px 0 0 0
+
+.about__gradient
+  position: absolute
+  top: 0
+  left: 0
+  width: 5px
+  height: 100%
+  background: linear-gradient(208deg, #f10365, #f75bb2, #f63289, #3b68b1, #2268b9, #0b0f73)
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.9)
+  background-size: 400% 400%
+  -webkit-animation: GradientL 5s ease infinite
+  -moz-animation: GradientL 5s ease infinite
+  animation: GradientL 5s ease infinite
+
+.about__description
+  padding: 0 0 0 20px
+  color: #ffffff
+  font-size: 24px
+  font-family: $font-family-second
+
+  @media (max-width: 700px)
+    font-size: 22px
+
+@-webkit-keyframes GradientL
+  0%
+    background-position: 0% 50%
+
+  50%
+    background-position: 100% 50%
+
+  100%
+    background-position: 0% 50%
+
+@-moz-keyframes GradientL
+  0%
+    background-position: 0% 50%
+
+  50%
+    background-position: 100% 50%
+
+  100%
+    background-position: 0% 50%
+
+@keyframes GradientL
+  0%
+    background-position: 25% 0%
+  50%
+    background-position: 76% 100%
+  100%
+    background-position: 25% 0%
+
+.about__logo
+  width: 870px
+  height: 268px
+  margin: 200px auto 0
+
+  @media (max-width: 700px)
+    width: 100%
+    height: auto
+    margin: 80px auto 0
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
