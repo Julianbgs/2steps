@@ -1,4 +1,45 @@
-//.footer
-//  flex-grow: 0
-//  flex-shrink: 0
-//  flex-basis: auto
+.footer
+  position: absolute
+  bottom: 10px
+  left: 0
+  width: 100%
+
+.footer__wrap
+  display: flex
+  justify-content: center
+
+.footer__elem
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 55px
+  height: 40px
+  margin-right: 10px
+  border-radius: 10px
+  background-color: #2d2d2d
+  text-decoration: none
+  transition: 1s all
+
+  &:hover
+    background-color: #26baec
+    transition: 1s all
+
+    i
+      color: rgba(255, 255, 255, 1)
+      font-size: 22px
+
+
+  i
+    color: rgba(255, 255, 255, 0.6)
+    font-size: 22px
+
+  &:last-child
+    margin-right: 0
+
+.footer__copyright
+  width: 100%
+  text-align: center
+  padding: 10px 0
+  color: #ffffff
+  font-family: $font-family-second
+  font-size: 12px
