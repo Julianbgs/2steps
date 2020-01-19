@@ -27,6 +27,7 @@
   flex-wrap: wrap
 
 .about__elem
+  position: relative
   display: flex
   justify-content: center
   align-items: center
@@ -38,6 +39,60 @@
 
     &:last-child
       margin-bottom: 0
+
+.about__elem--den
+  position: relative
+
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 35%
+    background: linear-gradient( to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))
+    opacity: 0
+    transition: 1s all
+    z-index: 1
+
+    @media (max-width: 700px)
+      height: 70%
+
+  &:hover
+    .about__info--den
+      opacity: 1
+      transition: 1s all
+
+    &::after
+      opacity: 1
+      transition: 1s all
+
+.about__elem--julian
+  position: relative
+
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 35%
+    background: linear-gradient( to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))
+    opacity: 0
+    transition: 1s all
+    z-index: 1
+
+    @media (max-width: 700px)
+      height: 70%
+
+  &:hover
+    .about__info--julian
+      opacity: 1
+      transition: 1s all
+
+    &::after
+      opacity: 1
+      transition: 1s all
 
 .about__img
   width: 100%
@@ -126,3 +181,36 @@
     height: 100%
     object-fit: cover
 
+.about__info
+  position: absolute
+  bottom: 0
+  left: 0
+  padding: 20px 20px 20px 35px
+
+.about__info--den
+  opacity: 0
+  transition: 1s all
+  z-index: 9
+
+.about__info--julian
+  opacity: 0
+  transition: 1s all
+  z-index: 9
+
+.about__info-title
+  color: #ffffff
+  font-family: $font-family-base
+  font-size: 36px
+  z-index: 10
+
+  @media (max-width: 700px)
+    font-size: 20px
+
+.about__info-descr
+  color: #ffffff
+  font-family: $font-family-base
+  font-size: 20px
+  z-index: 10
+
+  @media (max-width: 700px)
+    font-size: 16px
