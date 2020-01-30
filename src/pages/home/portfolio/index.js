@@ -12,11 +12,22 @@ export default () => {
   const $prevBg = $('.portfolio__prev-bg ');
   const portfolioSwiper = new Swiper('.portfolio__slider', {
       slidesPerView: 'auto',
-      spaceBetween: 20,
       navigation: {
         nextEl: '.portfolio__next',
         prevEl: '.portfolio__prev',
       },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+        320: {
+          spaceBetween: 0,
+        },
+        700: {
+          spaceBetween: 20,
+        }
+    }
     });
 
   function overAnimationZoom(elem) {
