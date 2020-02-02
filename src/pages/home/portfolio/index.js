@@ -17,9 +17,10 @@ export default () => {
         prevEl: '.portfolio__prev',
       },
     autoplay: {
-      delay: 2000,
+      delay: 2500,
       disableOnInteraction: false,
     },
+    loop: true,
     breakpoints: {
         320: {
           spaceBetween: 0,
