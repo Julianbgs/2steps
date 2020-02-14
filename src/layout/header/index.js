@@ -75,8 +75,19 @@ export default () => {
   // end
 
   // animate text and bg
-  showDescription($emailLink, $emailText, $emailElem);
-  fadeDescription($emailLink, $emailText, $emailElem);
-  showDescription($phoneLink, $phoneText, $phoneElem);
-  fadeDescription($phoneLink, $phoneText, $phoneElem);
+  $(window).resize(() => {
+    if($(window).width() > 770) {
+      showDescription($emailLink, $emailText, $emailElem);
+      fadeDescription($emailLink, $emailText, $emailElem);
+      showDescription($phoneLink, $phoneText, $phoneElem);
+      fadeDescription($phoneLink, $phoneText, $phoneElem);
+    }
+  });
+
+  if($(window).width() > 770) {
+    showDescription($emailLink, $emailText, $emailElem);
+    fadeDescription($emailLink, $emailText, $emailElem);
+    showDescription($phoneLink, $phoneText, $phoneElem);
+    fadeDescription($phoneLink, $phoneText, $phoneElem);
+  }
 };
