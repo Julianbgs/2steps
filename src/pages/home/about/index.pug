@@ -29,6 +29,14 @@ section.about
         | Это важно, ведь для заказчика необходимо добиться максимум от исполнителей его будущего сайта.
         | Кто, как не друзья, поймут и исполнят эту важную задачу?
         | Добро пожаловать
+  form(method="POST").about__callback
+    .about__callback-title
+      | Закажите сайт прямо сейчас
+    .about__callback-box
+      input(type="text" placeholder="Имя или название компании").about__callback-elem
+      input(type="email" placeholder="Ваша почта").about__callback-elem
+      textarea(placeholder="Описание заказа").about__callback-elem.about__callback-elem--area
+      input(type="submit").about__callback-submit.about__callback-elem
   .about__logo
     img(src="images/about/logo.png")
 
